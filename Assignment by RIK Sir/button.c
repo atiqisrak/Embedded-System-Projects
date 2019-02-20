@@ -3,7 +3,7 @@
  * button.c
  *
  *  Created on: Feb 20, 2019
- *      Author: niloy & farhana
+ *      Author: niloy
  */
 
 #include <avr/io.h>
