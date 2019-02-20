@@ -22,7 +22,7 @@ int main(void)
 	PORTB= 0x00;
 
 	uint8_t condition = 0;
-	uint8_t buttPrsCnt = 0;
+	uint8_t bpc = 0;
 
 	while(1)
 	{
@@ -41,22 +41,22 @@ int main(void)
 			while(bit_is_set(PIND, PIND2))
 				continue;				//No reaction until button released
 
-			++buttPrsCnt;	//increasing button count
+			++bpc;	//increasing button count
 
 			if (condition == 0)
 			{
-				if (buttPrsCnt == 10)	//if light = off & Button pressed 10 times
+				if (bpc == 10)	//if light = off & Button pressed 10 times
 				{
 				condition = 1;
-				buttPrsCnt = 0;	//Button Press Count reset
+				bpc = 0;	//Button Press Count reset
 				}
 			}
 			else if (condition == 1)
 				{
-				if (buttPrsCnt == 5)	//if light = on & Button pressed 5 times
+				if (bpc == 5)	//if light = on & Button pressed 5 times
 				{
 				condition = 0;
-				buttPrsCnt = 0;	//Button Press Count reset
+				bpc = 0;	//Button Press Count reset
 				}
 			}
 		}
