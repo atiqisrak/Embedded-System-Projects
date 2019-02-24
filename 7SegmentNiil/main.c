@@ -61,12 +61,10 @@ int main()
 			PORTD= 0b01110011; //9
 			_delay_ms(400);
 */
-
 		for(uint8_t i=0;i<16;i++)
 				{
 					PORTD= segment_look_up[i];
 					_delay_ms(500);
 				}
 	}
-
 }
