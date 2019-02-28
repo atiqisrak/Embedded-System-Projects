@@ -1,1 +1,0 @@
-lightpatterns.o: ../lightpatterns.c
